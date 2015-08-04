@@ -3,6 +3,8 @@ require "drip/client/accounts"
 require "drip/client/subscribers"
 require "drip/client/tags"
 require "drip/client/events"
+require "drip/client/webhooks"
+require "drip/client/campaigns"
 require "faraday"
 require "faraday_middleware"
 require "json"
@@ -13,6 +15,8 @@ module Drip
     include Subscribers
     include Tags
     include Events
+    include Webhooks
+    include Campaigns
 
     attr_accessor :access_token, :api_key, :account_id
 
