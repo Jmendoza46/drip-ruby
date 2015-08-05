@@ -18,8 +18,8 @@ module Drip
         post "#{account_id}/campaigns/#{campaign_id}/pause"
       end
 
-      def get_campaign_subscribers(campaign_id)
-        get "#{account_id}/campaigns/#{campaign_id}/subscribers"
+      def campaign_subscribers(campaign_id, options = {})
+        get "#{account_id}/campaigns/#{campaign_id}/subscribers", options
       end
       
     end
